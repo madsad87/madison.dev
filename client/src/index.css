@@ -10,33 +10,33 @@
   --font-mono: 'JetBrains Mono', monospace;
 
   /* Sophisticated Tech Palette - Dark Mode First Aesthetic */
-  --background: 222 47% 11%;
-  --foreground: 210 40% 98%;
+  --background: 37 28% 78%; /* #D8CBB5 */
+  --foreground: 27 18% 30%; /* #5A4B3F */
 
-  --card: 217 33% 17%;
-  --card-foreground: 210 40% 98%;
+  --card: 33 28% 65%; /* #C0A98E */
+  --card-foreground: 27 18% 30%; /* #5A4B3F */
 
-  --popover: 222 47% 11%;
-  --popover-foreground: 210 40% 98%;
+  --popover: 47 21% 94%; /* #F2F1EC */
+  --popover-foreground: 27 18% 30%; /* #5A4B3F */
 
-  --primary: 210 100% 50%; /* Electric Blue */
-  --primary-foreground: 210 40% 98%;
+  --primary: 27 39% 39%; /* #8B5E3C */
+  --primary-foreground: 47 21% 94%; /* #F2F1EC */
 
-  --secondary: 217 33% 17%;
-  --secondary-foreground: 210 40% 98%;
+  --secondary: 47 21% 94%; /* #F2F1EC */
+  --secondary-foreground: 27 18% 30%; /* #5A4B3F */
 
-  --muted: 217 33% 17%;
-  --muted-foreground: 215 20% 65%;
+  --muted: 47 21% 94%; /* #F2F1EC */
+  --muted-foreground: 209 3% 44%; /* #6E7074 */
 
-  --accent: 262 83% 58%; /* Purple Accent */
-  --accent-foreground: 210 40% 98%;
+  --accent: 27 41% 57%; /* #B98E6A */
+  --accent-foreground: 27 18% 30%; /* #5A4B3F */
 
   --destructive: 0 62.8% 30.6%;
   --destructive-foreground: 210 40% 98%;
 
-  --border: 217 33% 20%;
-  --input: 217 33% 20%;
-  --ring: 212.7 26.8% 83.9%;
+  --border: 209 3% 44%; /* #6E7074 */
+  --input: 209 3% 44%; /* #6E7074 */
+  --ring: 27 41% 57%; /* #B98E6A */
 
   --radius: 0.75rem;
 }
