@@ -122,10 +122,10 @@ export default function Home() {
                       <div className="font-mono text-sm text-muted-foreground">projects</div>
                       <div className="text-2xl font-bold text-white">50+</div>
                     </div>
-                    <div className="col-span-2 p-4 rounded-xl bg-background/50 border border-white/5">
-                      <Terminal className="w-8 h-8 text-green-400 mb-3" />
+                    <div className="col-span-2 p-4 rounded-xl bg-black/80 border border-white/10">
+                      <Terminal className="w-8 h-8 text-orange-500 mb-3" />
                       <div className="font-mono text-xs text-muted-foreground mb-2">$ initializing_agent...</div>
-                      <div className="font-mono text-sm text-green-400">{">"} systemic_optimization_complete</div>
+                      <div className="font-mono text-sm text-orange-500">{">"} systemic_optimization_complete</div>
                     </div>
                   </div>
                 </div>
