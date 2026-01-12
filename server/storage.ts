@@ -27,8 +27,8 @@ export class WordPressStorage implements IStorage {
       return data.skills.nodes.map((node, index) => ({
         id: index + 1, // Mock ID or map from WP ID
         name: node.title,
-        category: node.acfSkills.category,
-        description: node.acfSkills.description,
+        category: node.AcfSkills.category,
+        description: node.AcfSkills.description,
       }));
     } catch (error) {
       console.error("Failed to fetch skills from WordPress:", error);
@@ -46,9 +46,9 @@ export class WordPressStorage implements IStorage {
       return data.projects.nodes.map((node, index) => ({
         id: index + 1,
         title: node.title,
-        description: node.acfProjects.description,
-        link: node.acfProjects.link,
-        tags: node.acfProjects.tags ? node.acfProjects.tags.split(',').map(t => t.trim()) : [],
+        description: node.AcfProjects.description,
+        link: node.AcfProjects.link,
+        tags: node.AcfProjects.tags ? node.AcfProjects.tags.split(',').map(t => t.trim()) : [],
       }));
     } catch (error) {
       console.error("Failed to fetch projects from WordPress:", error);
