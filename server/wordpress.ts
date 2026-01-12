@@ -1,7 +1,7 @@
 import axios from "axios";
 import { GraphQLClient } from "graphql-request";
 
-const WP_API_URL = process.env.WORDPRESS_API_URL || "https://your-wp-instance.wpengine.com";
+const WP_API_URL = process.env.WORDPRESS_API_URL || "https://madisondotdev.wpenginepowered.com";
 const WP_GRAPHQL_URL = `${WP_API_URL}/graphql`;
 
 // GraphQL Client for fetching content
