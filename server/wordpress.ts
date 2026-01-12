@@ -15,7 +15,7 @@ export const wpRestClient = axios.create({
 
 export interface WPSkill {
   title: string;
-  acfSkills: {
+  AcfSkills: {
     category: string;
     description: string;
   };
@@ -23,7 +23,7 @@ export interface WPSkill {
 
 export interface WPProject {
   title: string;
-  acfProjects: {
+  AcfProjects: {
     description: string;
     link: string;
     tags: string; // Comma separated or similar, depending on implementation
@@ -36,7 +36,7 @@ export const QUERIES = {
       skills(first: 100) {
         nodes {
           title
-          acfSkills {
+          AcfSkills {
             category
             description
           }
@@ -49,7 +49,7 @@ export const QUERIES = {
       projects(first: 100) {
         nodes {
           title
-          acfProjects {
+          AcfProjects {
             description
             link
             tags
