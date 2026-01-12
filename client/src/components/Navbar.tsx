@@ -43,25 +43,28 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                to={link.to}
-                smooth={true}
-                offset={-80}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground cursor-pointer transition-colors relative group"
-              >
-                {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
-              </Link>
-            ))}
-            <Link
-              to="contact"
-              smooth={true}
-              className="px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-semibold shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-0.5 transition-all cursor-pointer"
-            >
-              Hire Me
-            </Link>
+            {navLinks.map((link) => {
+              const isContact = link.name === "Contact";
+
+              return (
+                <Link
+                  key={link.name}
+                  to={link.to}
+                  smooth={true}
+                  offset={-80}
+                  className={
+                    isContact
+                      ? "px-5 py-2.5 rounded-full bg-primary text-primary-foreground text-sm font-semibold shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-0.5 transition-all cursor-pointer"
+                      : "text-sm font-medium text-muted-foreground hover:text-foreground cursor-pointer transition-colors relative group"
+                  }
+                >
+                  {link.name}
+                  {!isContact && (
+                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
+                  )}
+                </Link>
+              );
+            })}
           </div>
 
           {/* Mobile Menu Button */}
