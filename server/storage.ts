@@ -19,10 +19,6 @@ import { wpClient, wpRestClient, QUERIES, type WPSkill, type WPProject } from ".
 export class WordPressStorage implements IStorage {
   async getSkills(): Promise<Skill[]> {
     try {
-      if (!process.env.WORDPRESS_API_URL) {
-        console.warn("WORDPRESS_API_URL not set, returning empty skills.");
-        return [];
-      }
       const data = await wpClient.request<{ skills: { nodes: WPSkill[] } }>(QUERIES.GET_SKILLS);
       return data.skills.nodes.map((node, index) => ({
         id: index + 1, // Mock ID or map from WP ID
@@ -38,10 +34,6 @@ export class WordPressStorage implements IStorage {
 
   async getProjects(): Promise<Project[]> {
     try {
-      if (!process.env.WORDPRESS_API_URL) {
-        console.warn("WORDPRESS_API_URL not set, returning empty projects.");
-        return [];
-      }
       const data = await wpClient.request<{ projects: { nodes: WPProject[] } }>(QUERIES.GET_PROJECTS);
       return data.projects.nodes.map((node, index) => ({
         id: index + 1,
